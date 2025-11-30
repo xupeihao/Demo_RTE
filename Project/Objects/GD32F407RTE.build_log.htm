@@ -21,39 +21,44 @@ Target DLL:      CMSIS_AGDI.dll V1.33.22.0
 Dialog DLL:      TCM.DLL V1.56.6.0
  
 <h2>Project:</h2>
-F:\MCU\GD32\GD32F407\Demo_RTE\Project\GD32F407RTE.uvprojx
-Project File Date:  11/18/2025
+F:\MCU\GD32\GD32F407\ARM_Self\GD32_RTE_test\Project\GD32F407RTE.uvprojx
+Project File Date:  11/30/2025
 
 <h2>Output:</h2>
 *** Using Compiler 'V6.23', folder: 'D:\Keil5\ARM\ARMCLANG\Bin'
 Rebuild target 'Target_1'
-compiling main.c...
-compiling lib_usart.c...
+compiling lib_peripheral.c...
+compiling gd32f4xx_pmu.c...
+compiling gd32f4xx_it.c...
+compiling gd32f4xx_gpio.c...
 compiling App.c...
 compiling lib_timer.c...
-compiling gd32f4xx_it.c...
-compiling systick.c...
-compiling gd32f4xx_i2c.c...
-compiling Task.c...
-compiling gd32f4xx_exti.c...
-compiling lib_peripheral.c...
-compiling gd32f4xx_gpio.c...
 compiling lib_usart0.c...
 compiling gd32f4xx_misc.c...
+compiling gd32f4xx_i2c.c...
+compiling systick.c...
+compiling lib_usart.c...
 compiling lib_timer5.c...
+compiling main.c...
+compiling gd32f4xx_exti.c...
 compiling gd32f4xx_dma.c...
 compiling gd32f4xx_adc.c...
-compiling gd32f4xx_pmu.c...
-compiling gd32f4xx_rcu.c...
-compiling gd32f4xx_syscfg.c...
 compiling gd32f4xx_spi.c...
-compiling gd32f4xx_rtc.c...
+compiling port.c...
+compiling freertos_evr.c...
+compiling list.c...
+compiling gd32f4xx_syscfg.c...
 compiling system_gd32f4xx.c...
 compiling gd32f4xx_usart.c...
+compiling heap_4.c...
 assembling startup_gd32f407_427.s...
 compiling gd32f4xx_timer.c...
+compiling gd32f4xx_rcu.c...
+compiling gd32f4xx_rtc.c...
+compiling queue.c...
+compiling tasks.c...
 linking...
-Program Size: Code=8834 RO-data=438 RW-data=8 ZI-data=16528  
+Program Size: Code=9486 RO-data=438 RW-data=8 ZI-data=16656  
 ".\Objects\GD32F407RTE.axf" - 0 Error(s), 0 Warning(s).
 
 <h2>Software Packages used:</h2>
@@ -63,6 +68,14 @@ Package Vendor: ARM
                 ARM.CMSIS.5.9.0
                 CMSIS (Common Microcontroller Software Interface Standard)
    * Component: CORE Version: 5.6.0
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS-FreeRTOS.10.5.1.pack
+                ARM.CMSIS-FreeRTOS.10.5.1
+                Bundle of FreeRTOS for Cortex-M and Cortex-A
+   * Component: Config Variant: FreeRTOS Version: 10.5.1
+   * Component: Core Variant: Cortex-M Version: 10.5.1
+   * Component: Heap Variant: Heap_4 Version: 10.5.1
 
 Package Vendor: GigaDevice
                 https://gd32mcu.com/GigaDevice.GD32F4xx_DFP.3.3.0.pack
@@ -85,12 +98,33 @@ Package Vendor: GigaDevice
    * Component: USART Version: 3.3.0
 
 <h2>Collection of Component include folders:</h2>
+  ./RTE/RTOS
   ./RTE/_Target_1
+  D:/Keil5/Pack/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Include
+  D:/Keil5/Pack/ARM/CMSIS-FreeRTOS/10.5.1/Source/include
+  D:/Keil5/Pack/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/GCC/ARM_CM4F
   D:/Keil5/Pack/ARM/CMSIS/5.9.0/CMSIS/Core/Include
   D:/Keil5/Pack/GigaDevice/GD32F4xx_DFP/3.3.0/Device/F4XX/Firmware/Peripherals/inc
   D:/Keil5/Pack/GigaDevice/GD32F4xx_DFP/3.3.0/Device/F4XX/Include
 
 <h2>Collection of Component Files used:</h2>
+
+   * Component: ARM.FreeRTOS::RTOS:Config:FreeRTOS:10.5.1
+      Include file:  Config/ARMCM/FreeRTOSConfig.h
+
+   * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:10.5.1
+      Source file:   Source/portable/GCC/ARM_CM4F/port.c
+      Include file:  Source/include/FreeRTOS.h
+      Include file:  Source/include/queue.h
+      Include file:  Source/include/semphr.h
+      Include file:  Source/include/task.h
+      Source file:   Source/list.c
+      Source file:   Source/queue.c
+      Source file:   Source/tasks.c
+      Source file:   CMSIS/RTOS2/FreeRTOS/Source/freertos_evr.c
+
+   * Component: ARM.FreeRTOS::RTOS:Heap:Heap_4:10.5.1
+      Source file:   Source/portable/MemMang/heap_4.c
 
    * Component: ARM::CMSIS:CORE:5.6.0
 
@@ -103,16 +137,16 @@ Package Vendor: GigaDevice
       Source file:   Device/F4XX/Source/system_gd32f4xx.c
 
    * Component: GigaDevice::Device:StdPeripherals:ADC:3.3.0
-      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_adc.c
       Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_adc.h
+      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_adc.c
 
    * Component: GigaDevice::Device:StdPeripherals:DMA:3.3.0
       Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_dma.h
       Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_dma.c
 
    * Component: GigaDevice::Device:StdPeripherals:EXTI:3.3.0
-      Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_exti.h
       Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_exti.c
+      Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_exti.h
 
    * Component: GigaDevice::Device:StdPeripherals:GPIO:3.3.0
       Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_gpio.h
@@ -131,29 +165,29 @@ Package Vendor: GigaDevice
       Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_pmu.c
 
    * Component: GigaDevice::Device:StdPeripherals:RCU:3.3.0
-      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_rcu.c
       Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_rcu.h
+      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_rcu.c
 
    * Component: GigaDevice::Device:StdPeripherals:RTC:3.3.0
       Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_rtc.c
       Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_rtc.h
 
    * Component: GigaDevice::Device:StdPeripherals:SPI_I2S:3.3.0
-      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_spi.c
       Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_spi.h
+      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_spi.c
 
    * Component: GigaDevice::Device:StdPeripherals:SYSCFG:3.3.0
       Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_syscfg.h
       Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_syscfg.c
 
    * Component: GigaDevice::Device:StdPeripherals:TIMER:3.3.0
-      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_timer.c
       Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_timer.h
+      Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_timer.c
 
    * Component: GigaDevice::Device:StdPeripherals:USART:3.3.0
       Include file:  Device/F4XX/Firmware/Peripherals/inc/gd32f4xx_usart.h
       Source file:   Device/F4XX/Firmware/Peripherals/src/gd32f4xx_usart.c
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

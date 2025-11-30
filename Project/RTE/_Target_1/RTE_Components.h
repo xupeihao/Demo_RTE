@@ -16,6 +16,12 @@
  */
 #define CMSIS_device_header "gd32f4xx.h"
 
+/* ARM.FreeRTOS::RTOS:Config:FreeRTOS:10.5.1 */
+#define RTE_RTOS_FreeRTOS_CONFIG        /* RTOS FreeRTOS Config for FreeRTOS API */
+/* ARM.FreeRTOS::RTOS:Core:Cortex-M:10.5.1 */
+#define RTE_RTOS_FreeRTOS_CORE          /* RTOS FreeRTOS Core */
+/* ARM.FreeRTOS::RTOS:Heap:Heap_4:10.5.1 */
+#define RTE_RTOS_FreeRTOS_HEAP_4        /* RTOS FreeRTOS Heap 4 */
 /* GigaDevice::Device:StdPeripherals:ADC:3.3.0 */
 #define RTE_DEVICE_STDPERIPHERALS_ADC
 /* GigaDevice::Device:StdPeripherals:DMA:3.3.0 */

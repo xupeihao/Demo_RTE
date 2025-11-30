@@ -3,7 +3,6 @@
 ".\objects\gd32f4xx_it.o"
 ".\objects\main.o"
 ".\objects\systick.o"
-".\objects\task.o"
 ".\objects\lib_peripheral.o"
 ".\objects\lib_timer.o"
 ".\objects\lib_timer5.o"
@@ -24,6 +23,12 @@
 ".\objects\gd32f4xx_usart.o"
 ".\objects\startup_gd32f407_427.o"
 ".\objects\system_gd32f4xx.o"
+".\objects\freertos_evr.o"
+".\objects\list.o"
+".\objects\port.o"
+".\objects\heap_4.o"
+".\objects\queue.o"
+".\objects\tasks.o"
 --library_type=microlib --strict --scatter ".\Objects\GD32F407RTE.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

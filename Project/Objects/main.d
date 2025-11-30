@@ -23,7 +23,7 @@
   D:\Keil5\Pack\GigaDevice\GD32F4xx_DFP\3.3.0\Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_timer.h \
   D:\Keil5\Pack\GigaDevice\GD32F4xx_DFP\3.3.0\Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_usart.h \
   ..\User\systick.h D:\Keil5\ARM\ARMCLANG\bin\..\include\stdio.h \
-  ..\User\Task.h ..\App\App.h ..\Hardware\board_config.h \
+  ..\App\app.h ..\Hardware\board_config.h \
   D:\Keil5\ARM\ARMCLANG\bin\..\include\string.h \
   ..\Libraries\lib_peripheral.h ..\Libraries\usart\lib_usart.h \
   ..\Libraries\usart\usart_config.h ..\Libraries\usart\lib_usart0.h \
